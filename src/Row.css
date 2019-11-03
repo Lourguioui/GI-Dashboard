@@ -1,0 +1,33 @@
+.Row{
+    overflow: hidden;
+    border: grey 0.5px solid;
+    border-top : none;
+    border-right : none;
+    border-left : none;
+    margin-bottom: 0px;
+    width : 100%;
+}
+
+.Row p{
+    font-family : "Roboto", sans-serif;
+    color : white;
+    text-align : center;
+    display : inline-block;
+    float : left;
+    margin-left : 25px;
+    margin-right : 25px;
+    margin-top : 12px;
+    text-align: center;
+}
+.Row .mail{
+    margin-left : 0px;
+    margin-right : 0px;
+}
+.Row .dep{
+    margin-left : 0px;
+    margin-right : 0px;
+}
+.Row .remove{
+    margin-top : 6px;
+    float : left;
+}

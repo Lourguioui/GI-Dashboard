@@ -1,0 +1,58 @@
+.card-main2 {
+  width: 250px;
+  background-color: rgb(61, 137, 199);
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+  height: 80px;
+}
+
+.icon-container2 {
+  background-color: rgb(28, 99, 180);
+  float: left;
+  height: 80px;
+  width: 80px;
+  margin-left: -15px;
+  box-shadow: 3px 0px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container2 i {
+  margin-top: 15px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon-container2 {
+  text-align: center;
+}
+.crd-cont1 div {
+  display: inline-block;
+}
+
+.card-main2 :hover {
+  background-color: rgb(28, 99, 180);
+  transition: 0.5s;
+}
+
+.col-lg {
+  width: 150px;
+  float: right;
+  margin-top: 0px;
+  height: 80px;
+  margin-right: -10px;
+}
+.col-lg .title2 {
+  font-family: "Roboto", sans-serif;
+  font-size: bold;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+@media screen and (max-width: 1200px) {
+  .card-main2 {
+    width: 350px;
+  }
+  .col-lg .title2 {
+    margin-left: -110px;
+    width: 100px;
+  }
+}

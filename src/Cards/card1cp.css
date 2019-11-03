@@ -1,0 +1,65 @@
+.card-main1 {
+  width: 250px;
+  background-color: rgb(223, 75, 75);
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+  height: 80px;
+}
+.card-main12 {
+  width: 350px;
+  background-color: rgb(223, 75, 75);
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+  height: 80px;
+}
+
+.icon-container1 {
+  background-color: rgb(231, 54, 54);
+  float: left;
+  height: 80px;
+  width: 80px;
+  margin-left: -15px;
+  box-shadow: 3px 0px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container1 i {
+  margin-top: 15px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon-container1 {
+  text-align: center;
+}
+.crd-cont1 div {
+  display: inline-block;
+}
+
+.card-main1 :hover {
+  background-color: rgb(231, 54, 54);
+  transition: 0.5s;
+}
+
+.col-lg {
+  width: 150px;
+  float: right;
+  margin-top: 0px;
+  height: 80px;
+  margin-right: -10px;
+}
+.col-lg .title1 {
+  font-family: "Roboto", sans-serif;
+  font-size: bold;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+@media screen and (max-width: 1200px) {
+  .card-main1 {
+    width: 350px;
+  }
+
+  .col-lg .title1 {
+    margin-left: -110px;
+    width: 100px;
+  }
+}

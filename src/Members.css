@@ -1,0 +1,32 @@
+.members {
+  margin-left : 300px;
+  /*background-color : red;*/
+  margin-top: 50px;
+  color: black;
+  height: 1000px;
+  background-color: rgb(23, 23, 43);
+}
+.members .members-table{
+  background-color : #1e2340;
+  box-shadow: 1px 4px 15px 6px rgba(0,0,0,0.1);
+  margin-top : 60px;
+}
+.members .theader{
+  margin-bottom : 0px;
+  border : grey 0.5px solid;
+  border-right : none;
+  border-left : none;
+}
+.theader p{
+  text-align : center;
+  display : inline-block;
+  float : left;
+  margin-left : 25px;
+  margin-right : 25px;
+  margin-top : 12px;
+  text-align: center;
+  color : white;
+
+
+}
+

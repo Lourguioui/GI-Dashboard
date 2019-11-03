@@ -1,0 +1,39 @@
+.main {
+  background-color: #171c35;
+  width: 130px;
+  height: 800px;
+  position: fixed;
+  margin-top: 0px;
+}
+
+.links {
+  margin-top: 70px;
+  width: 100px;
+  margin-left: 20px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: -15px;
+}
+li {
+  margin-top: 20px;
+}
+li span {
+  color: grey;
+}
+.icon-cont {
+}
+.icon-menu {
+  color: #17af;
+  font-size: 40px;
+  cursor: pointer;
+}
+.links :hover {
+  text-decoration: none;
+  color: #17af;
+  transition: 0.6s;
+}

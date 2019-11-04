@@ -109,7 +109,16 @@ class Membres extends Component {
           this.handleChangeGrade = this.handleChangeGrade.bind(this);
     }
     handleSubmit (event){
-
+        const newMember = {
+            Id : this.state.Members.length + 1,
+            firstName : this.state.firstName,
+            lastName : this.state.lastName,
+            mailAdrress : this.state.mailAdrress,
+            Depa : this.state.Depa,
+            grade : this.state.grade
+        }
+        const Members = this.state.Members.push(newMember);
+        this.setState({Members});
     }
 
     handleChangeFirstName(event){
@@ -190,6 +199,7 @@ class Membres extends Component {
                         <label>
                             <input type="text" value={this.state.grade} placeholder="Enter Grade" onChange={this.handleChangeGrade} />
                         </label>
+                        <input type="submit" value="submit"/>
                     </form>
               </div>
 

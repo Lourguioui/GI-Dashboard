@@ -1,5 +1,5 @@
 .members {
-  margin-left : 300px;
+  margin-left : 27%;
   /*background-color : red;*/
   margin-top: 50px;
   color: black;
@@ -26,7 +26,14 @@
   margin-top : 12px;
   text-align: center;
   color : white;
-
-
+}
+.form{
+  display : block;
+  margin-top : 20px;
+  background-color : rgb(23, 23, 43);
+  width : 400px;
+}
+.form label {
+  display : block;
 }
 

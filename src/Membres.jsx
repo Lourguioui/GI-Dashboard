@@ -96,45 +96,59 @@ class Membres extends Component {
                   lastName: '',
                   mailAdrress: '',
                   Depa: '',
-                  grade: ''
+                  grade: '',
+                  refs : 'add-member'
 
 
 
           };
+          this.formRef = React.createRef();
           this.handleDelete = this.handleDelete.bind(this);
           this.handleChangeFirstName = this.handleChangeFirstName.bind(this);
           this.handleChangeLastName = this.handleChangeLastName.bind(this);
           this.handleChangeMail = this.handleChangeMail.bind(this);
           this.handleChangeDepa = this.handleChangeDepa.bind(this);
           this.handleChangeGrade = this.handleChangeGrade.bind(this);
+          this.handleSubmit = this.handleSubmit.bind(this);
+          this.handleDisplay = this.handleDisplay.bind(this);
     }
-    handleSubmit (event){
+    handleSubmit (event) {
         const newMember = {
-            Id : this.state.Members.length + 1,
-            firstName : this.state.firstName,
-            lastName : this.state.lastName,
-            mailAdrress : this.state.mailAdrress,
-            Depa : this.state.Depa,
-            grade : this.state.grade
+            Id: this.state.Members.length + 1,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            mailAdrress: this.state.mailAdrress,
+            Depa: this.state.Depa,
+            grade: this.state.grade
         }
-        const Members = this.state.Members.push(newMember);
+        const Members = this.state.Members;
+        Members.push(newMember);
         this.setState({Members});
+        console.log(this.state.Members);
+        event.preventDefault();
+    }
+
+    handleClick = () => {
+        console.log(this.state.Members);
+    }
+    handleDisplay = () =>{
+        this.formRef.current.style.display = 'block';
     }
 
     handleChangeFirstName(event){
-        this.setState( {firstName : event.target.firstName});
+        this.setState( {firstName : event.target.value});
     }
     handleChangeLastName(event){
-        this.setState({lastName : event.target.lastName});
+        this.setState({lastName : event.target.value});
     }
     handleChangeMail(event){
-        this.setState( {mailAdrress : event.target.mailAdrress});
+        this.setState( {mailAdrress : event.target.value});
     }
     handleChangeDepa(event) {
-        this.setState( {Depa : event.target.Depa});
+        this.setState( {Depa : event.target.value});
     }
     handleChangeGrade(event) {
-        this.setState({grade : event.target.Depa});
+        this.setState({grade : event.target.value});
     }
     handleDelete = (memberId) => {
       console.log('memberid' + memberId);
@@ -183,25 +197,27 @@ class Membres extends Component {
             ))}
           </div>
               <div className="form">
-                    <form onSubmit={this.handleSubmit}>
-                        <label>
-                            <input type="text" value={this.state.firstName} placeholder="Enter First Name" onChange={this.handleChangeFirstName} />
-                        </label>
-                        <label>
-                            <input type="text" value={this.state.lastName} placeholder="Enter Last Name" onChange={this.handleChangeLastName} />
-                        </label>
-                        <label>
-                            <input type="text" value={this.state.mailAdrress} placeholder="Enter Mail" onChange={this.handleChangeMail} />
-                        </label>
-                        <label>
-                            <input type="text" value={this.state.Depa} placeholder="Enter Section" onChange={this.handleChangeDepa} />
-                        </label>
-                        <label>
-                            <input type="text" value={this.state.grade} placeholder="Enter Grade" onChange={this.handleChangeGrade} />
-                        </label>
-                        <input type="submit" value="submit"/>
-                    </form>
+
+                        <form onSubmit={this.handleSubmit}>
+                            <label>
+                                <input type="text"  placeholder="Enter First Name" onChange={this.handleChangeFirstName} />
+                            </label>
+                            <label>
+                                <input type="text" placeholder="Enter Last Name" onChange={this.handleChangeLastName} />
+                            </label>
+                            <label>
+                                <input type="text"  placeholder="Enter Mail" onChange={this.handleChangeMail} />
+                            </label>
+                            <label>
+                                <input type="text"  placeholder="Enter Section" onChange={this.handleChangeDepa} />
+                            </label>
+                            <label>
+                                <input type="text"  placeholder="Enter Grade" onChange={this.handleChangeGrade} />
+                            </label>
+                            <input type="submit" value="submit" onClick={this.handleClick}/>
+                        </form>
               </div>
+          <button className="display-btn" ref={this.formRef} onClick={this.handleDisplay()}>Add a member</button>
 
       </div>
     );

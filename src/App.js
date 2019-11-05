@@ -19,7 +19,7 @@ class App extends Component {
 		super();
 	}
 	render() {
-		document.body.style = 'background : rgb(23, 23, 43);';
+		document.body.style = 'background : rgb(23, 23, 43); padding-bottom : 100px;';
 		document.getElementsByTagName("META")[2].name = "viewport";
 		document.getElementsByTagName("META")[2].content =
 			"width=device-width, initial-scale=1";

@@ -45,18 +45,50 @@
   height : 50px;
 
 }
+form {
+    padding-top : 30px;
+  padding-bottom: 30px;
+}
 .form input[type=submit] {
-  margin-left : 43%;
+  margin-left : 25%;
   width : 150px;
   height: 50px;
   background-color : rgb(28, 99, 180);
   text-align : center;
   border : none;
   border-radius : 5px;
+  cursor : pointer;
+  transform: 0.2s;
+  font-family: "Helvetica", sans-serif;
+  margin-top : 15px;
+}
+.form input[type=submit]:hover{
+    background-color : #128fcd;
+    color : #daf5ff;
+  transition: 0.4s;
+}
+.cancel{
+  margin-left : 13.5%;
+  width : 150px;
+  height: 50px;
+  background-color : #91cdc5;
+  border : none;
+  border-radius : 5px;
+  transition : 0.4s;
+  font-family: "Helvetica", sans-serif;
+  cursor : pointer;
+  margin-top : 15px;
+}
+.cancel:hover{
+  background-color : #75cdc8;
+  color : white;
+}
+.cancel:focus{
+  outline:none;
 }
 .display-btn{
   height : 50px;
-  margin-left : 36%;
+  margin-left : 43%;
   margin-top : 30px;
   background-color : #128fcd;
   border-radius : 6px;
@@ -65,11 +97,25 @@
   color : white;
   font-family : Roboto;
   font-size : bold;
-
+  transition : 0.5s;
 }
 .display-btn:hover{
   background-color : #1844cd;
-}.display-btn:focus{
+}
+.display-btn:focus{
   outline : none;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
 }
 

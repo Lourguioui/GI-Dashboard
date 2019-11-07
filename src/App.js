@@ -12,36 +12,35 @@ import Membres from "./Membres";
 import Events from "./Events";
 
 class App extends Component {
-	state = {
+  state = {};
+  constructor() {
+    super();
+  }
+  render() {
+    document.body.style =
+      "background : rgb(23, 23, 43); padding-bottom : 100px;";
+    document.getElementsByTagName("META")[2].name = "viewport";
+    document.getElementsByTagName("META")[2].content =
+      "width=device-width, initial-scale=1";
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <Header />
+          <Router>
+            <>
+              <div className="side-bar">
+                <SideBar />
+              </div>
 
-	};
-	constructor() {
-		super();
-	}
-	render() {
-		document.body.style = 'background : rgb(23, 23, 43); padding-bottom : 100px;';
-		document.getElementsByTagName("META")[2].name = "viewport";
-		document.getElementsByTagName("META")[2].content =
-			"width=device-width, initial-scale=1";
-		return (
-			<div className="container-fluid">
-				<div className="row">
-					<Header />
-					<Router>
-						<>
-							<div className="side-bar">
-								<SideBar />
-							</div>
-
-							<Route exact path="/" component={Home} />
-							<Route path="/members" component={Membres} />
-							<Route path="/events" component={Events} />
-						</>
-					</Router>
-				</div>
-			</div>
-		);
-	}
+              <Route exact path="/" component={Home} />
+              <Route path="/members" component={Membres} />
+              <Route path="/events" component={Events} />
+            </>
+          </Router>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

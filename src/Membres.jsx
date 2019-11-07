@@ -91,13 +91,14 @@ class Membres extends Component {
                       grade: 'actif'
                   }
               ],
-                  Id: '',
-                  firstName: '',
-                  lastName: '',
-                  mailAdrress: '',
-                  Depa: '',
-                  grade: '',
-                  refs : 'add-member'
+              Id: '',
+              firstName: '',
+              lastName: '',
+              mailAdrress: '',
+              Depa: '',
+              grade: '',
+              formDisplay: document.getElementById("form"),
+              displayStyle : 'none'
 
 
 
@@ -127,16 +128,27 @@ class Membres extends Component {
         console.log(this.state.Members);
         event.preventDefault();
     }
-
+    handleCancel= () =>{
+        this.setState({displayStyle : 'none'});
+    }
     handleClick = () => {
         console.log(this.state.Members);
+        this.setState({displayStyle : 'none'});
     }
     handleDisplay = () =>{
-        this.formRef.current.style.display = 'block';
+        var displayStyle;
+        if(this.state.displayStyle === 'none'){
+            displayStyle = 'block';
+        }else{
+            displayStyle = 'none';
+        }
+        this.setState({displayStyle});
     }
 
     handleChangeFirstName(event){
+
         this.setState( {firstName : event.target.value});
+
     }
     handleChangeLastName(event){
         this.setState({lastName : event.target.value});
@@ -196,7 +208,7 @@ class Membres extends Component {
                 />
             ))}
           </div>
-              <div className="form">
+              <div className="form animate" id="form" style={{display : this.state.displayStyle}}>
 
                         <form onSubmit={this.handleSubmit}>
                             <label>
@@ -215,9 +227,10 @@ class Membres extends Component {
                                 <input type="text"  placeholder="Enter Grade" onChange={this.handleChangeGrade} />
                             </label>
                             <input type="submit" value="submit" onClick={this.handleClick}/>
+                            <button className="cancel" onClick={this.handleCancel}>Cancel</button>
                         </form>
               </div>
-          <button className="display-btn" ref={this.formRef} onClick={this.handleDisplay()}>Add a member</button>
+          <button className="display-btn" ref={this.formRef} onClick={this.handleDisplay}>Add a member</button>
 
       </div>
     );

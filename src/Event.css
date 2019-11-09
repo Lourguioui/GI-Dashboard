@@ -1,0 +1,25 @@
+.event {
+  background-color: #1e2340;
+  overflow: hidden;
+  width: 800px;
+}
+.event div {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.event div p {
+  padding: 5px;
+  padding-bottom: 2px;
+  margin-top: 13px;
+  color: white;
+}
+.event div .event-date {
+}
+.event div .remove {
+  margin-top: 10px;
+}
+@media screen and (max-width: 576px) {
+  .event {
+    width: 300px;
+  }
+}

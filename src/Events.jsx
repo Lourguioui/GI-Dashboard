@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Events.css";
-
+import Event from "./Event.jsx";
 class Events extends Component {
   state = {
 
@@ -8,7 +8,7 @@ class Events extends Component {
   render() {
     return (
       <div className="Events">
-        <h1>Events</h1>
+          <Event/>
       </div>
     );
   }

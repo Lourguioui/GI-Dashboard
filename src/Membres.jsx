@@ -122,10 +122,18 @@ class Membres extends Component {
             Depa: this.state.Depa,
             grade: this.state.grade
         }
+        //const test = this.state.firstName.length = this.state.lastName.length = this.state.mailAdrress.length = this.state.Depa.length = this.state.grade.length = 0;
+        /*const test1 = (this.state.firstName.length = 0);
+        const test2 = (this.state.lastName.length = 0);
+        const test3 = (this.state.mailAdrress.length = 0);
+        const test4 = (this.state.Depa.length = 0);
+        const test5 = (this.state.grade.length = 0);*/
+
         const Members = this.state.Members;
         Members.push(newMember);
         this.setState({Members});
         console.log(this.state.Members);
+        event.preventDefault();
         event.preventDefault();
     }
     handleCancel= () =>{

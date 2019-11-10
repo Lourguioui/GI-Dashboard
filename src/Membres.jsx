@@ -190,17 +190,22 @@ class Membres extends Component {
 
     };
   render() {
+    document.getElementsByTagName("META")[2].name = "viewport";
+    document.getElementsByTagName("META")[2].content =
+      "width=device-width, initial-scale=1";
     return (
       <div className="members">
           <div className="members-table">
               <div className="container theader">
-                  <div className="row">
+                  <div className="row tbinfo">
+                    
                       <div className="col-md-2 FN"><p className="firstName">First Name</p></div>
                       <div className=":col-md-2 LN"><p className="lastName">Last Name</p></div>
                       <div className="col-md-2 ML"><p className="mailAddress">Mail</p></div>
                       <div className="col-md-2 DP"><p className="dep">Departement</p></div>
                       <div className="col-md-2 GD"><p className="grade">Grade</p></div>
                       <div className="col-md-2 remove"></div>
+                    
                   </div>
               </div>
             { this.state.Members.map(members => (

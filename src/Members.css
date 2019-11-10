@@ -118,4 +118,34 @@ form {
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+@media screen and (max-width : 850px){
+  .members{
+    margin-left : 4%;
+  }
+}
+@media screen and (max-width : 900px){
+  .members{
+    margin-left : 8%;
+  }
+}
+@media screen and (max-width : 950px){
+  .members{
+    margin-left : 10%;
+  }
+}
+@media screen and (max-width : 800px){
+  .members{
+    margin-left : 3%;
+  }
+}
+@media screen and (max-width : 767px){
+  .tbinfo{
+    display : none;
+  }
+  .members{
+    width : 400px;
+    margin-left : 20%;
+  }
+
+}
 

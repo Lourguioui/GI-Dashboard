@@ -27,7 +27,7 @@ class Event extends Component {
               <p className="event-place">{this.state.eventPlace}</p>
             </div>
             <div className="col-sm-2">
-              <button tyoe="button" className="remove btn btn-danger">
+              <button tyoe="button" onClick={() => this.props.onDelete(this.props.Id)} className="remove btn btn-danger">
                 remove
               </button>
             </div>

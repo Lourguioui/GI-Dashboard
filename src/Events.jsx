@@ -13,7 +13,7 @@ class Events extends Component {
       ]
   };
   handleDelete = eventId =>{
-    const Events = this.state.Events.filter(x => x.Id != eventId);
+    const Events = this.state.Events.filter(x => x.Id !== eventId);
     this.setState({Events});
   }
   render() {
@@ -26,6 +26,7 @@ class Events extends Component {
                 eventName={events.eventName}
                 eventDate={events.eventDate}
                 eventPlace={events.eventPlace}
+                onDelete={this.handleDelete}
             />
           ))}
       </div>

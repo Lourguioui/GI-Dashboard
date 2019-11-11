@@ -5,6 +5,9 @@ import "./Header.css";
 class Header extends Component {
   state = {};
   render() {
+    document.getElementsByTagName("META")[2].name = "viewport";
+    document.getElementsByTagName("META")[2].content =
+      "width=device-width, initial-scale=1";
     return (
       <div className="wrapper">
         <MetaTags>

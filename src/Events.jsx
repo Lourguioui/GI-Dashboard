@@ -13,7 +13,7 @@ class Events extends Component {
       ]
   };
   handleDelete = eventId =>{
-    const Events = this.state.Events.filter(x => x.Id !== eventId);
+    const Events = this.state.Events.filter(x => x.eventId !== eventId);
     this.setState({Events});
   }
   render() {
@@ -21,12 +21,12 @@ class Events extends Component {
       <div className="Events">
           {this.state.Events.map(events => (
             <Event
-                Key={events.Id}
-                Id={events.Id}
+                Key={events.eventId}
                 eventName={events.eventName}
                 eventDate={events.eventDate}
                 eventPlace={events.eventPlace}
-                onDelete={this.handleDelete}
+                onRemove={this.handleDelete}
+                events={events}
             />
           ))}
       </div>

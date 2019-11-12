@@ -4,7 +4,7 @@ import "./Event.css";
 
 class Event extends Component {
   state = {
-    Id: this.props.Id,
+    eventId: this.props.eventId,
     eventName: this.props.eventName,
     eventDate: this.props.eventDate,
     eventPlace: this.props.eventPlace
@@ -27,7 +27,7 @@ class Event extends Component {
               <p className="event-place">{this.state.eventPlace}</p>
             </div>
             <div className="col-sm-2">
-              <button tyoe="button" onClick={() => this.props.onDelete(this.props.Id)} className="remove btn btn-danger">
+              <button type="button" onClick={() => this.props.onRemove(this.props.events.eventId)} className="remove btn btn-danger">
                 remove
               </button>
             </div>

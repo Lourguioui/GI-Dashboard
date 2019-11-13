@@ -2,3 +2,8 @@
   margin-left: 25%;
   margin-top: 60px;
 }
+form label {
+  display : block;
+}
+
+

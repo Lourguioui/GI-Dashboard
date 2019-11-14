@@ -2,8 +2,73 @@
   margin-left: 25%;
   margin-top: 60px;
 }
+form{
+  background-color : #1e2340;
+  margin-top : 30px;
+  width : 600px;
+  margin-left : 12%;
+}
 form label {
   display : block;
+  margin-left : 18%;
+}
+form label input[type=text]{
+  width : 400px;
+  margin-top : 20px;
+  height : 50px;
+}
+form input[type=submit]{
+  margin-left : 22%;
+  width : 150px;
+  height: 50px;
+  border : none;
+  background-color :   rgb(28, 99, 180);
+  border-radius : 5px;
+  transofrm : 0.2s;
+  font-family: "Helvetica", sans-serif;
+  margin-top : 15px;
+  cursor : pointer;
+
+}
+form input[type=submit]:hover{
+  background-color : #128fcd;
+  color : #daf5ff;
+  transition: 0.4s;
+}
+.cancel-btn{
+  margin-left : 8.5%;
+  width : 150px;
+  height: 50px;
+  border : none;
+  background-color :  #91cdc5;
+  border-radius : 5px;
+  transition : 0.4s;
+  font-family: "Helvetica", sans-serif;
+  margin-top : 15px;
+  cursor : pointer;
+}
+.cancel-btn:hover{
+  background-color : #75cdc8;
+  color : white;
+}
+.display-event-form{
+  height : 50px;
+  margin-left : 43%;
+  margin-top : 30px;
+  background-color : #128fcd;
+  border-radius : 6px;
+  border : none;
+  cursor: pointer;
+  color : white;
+  font-family : Roboto;
+  font-size : bold;
+  transition : 0.5s;
+}
+.display-event-form:hover{
+  background-color : #1844cd;
+}
+.display-event-form:focus{
+  outline : none;
 }
 
 

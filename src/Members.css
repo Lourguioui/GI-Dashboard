@@ -58,7 +58,6 @@ form {
   border : none;
   border-radius : 5px;
   cursor : pointer;
-  transform: 0.2s;
   font-family: "Helvetica", sans-serif;
   margin-top : 15px;
 }

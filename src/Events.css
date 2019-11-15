@@ -35,6 +35,9 @@ form input[type=submit]:hover{
   color : #daf5ff;
   transition: 0.4s;
 }
+form input[type=submit]:focus{
+  outline : none;
+}
 .cancel-btn{
   margin-left : 8.5%;
   width : 150px;
@@ -50,6 +53,9 @@ form input[type=submit]:hover{
 .cancel-btn:hover{
   background-color : #75cdc8;
   color : white;
+}
+.cancel-btn:focus{
+  outline : none;
 }
 .display-event-form{
   height : 50px;

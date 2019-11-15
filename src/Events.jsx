@@ -17,7 +17,8 @@ class Events extends Component {
       eventName: '',
       eventDate: '',
       eventPlace: '',
-      displayStyle: 'none'
+      displayStyle: 'none',
+      formStyle: ''
     };
     this.handleChangeEventName = this.handleChangeEventName.bind(this);
     this.handleChangeEventDate = this.handleChangeEventDate.bind(this);
@@ -42,6 +43,8 @@ class Events extends Component {
       Events.push(newEvent);
       this.setState({ Events });
       event.preventDefault();
+    } else {
+      this.setState({ formStyle: '2px solid red' });
     }
     document.getElementById("add-event-form").reset();
     event.preventDefault();
@@ -69,6 +72,7 @@ class Events extends Component {
   }
 
   render() {
+    document.title = "Admin dashboard | Events";
     return (
       <div className="Events">
         {this.state.Events.map(events => (
@@ -84,15 +88,15 @@ class Events extends Component {
         <div className="eventForm">
           <form onSubmit={this.handleSubmit} id="add-event-form" className="animate" style={{ display: this.state.displayStyle }}>
             <label>
-              <input type="text" placeholder="Enter Event Name" onChange={this.handleChangeEventName} />
+              <input type="text" style={{ border: this.state.formStyle }} placeholder="Enter Event Name" onChange={this.handleChangeEventName} />
             </label>
             <label>
-              <input type="text" placeholder="Enter Event Date" onChange={this.handleChangeEventDate} />
+              <input type="text" placeholder="Enter Event Date" style={{ border: this.state.formStyle }} onChange={this.handleChangeEventDate} />
             </label>
             <label>
-              <input type="text" placeholder="Enter Event Place" onChange={this.handleChangeEventPlace} />
+              <input type="text" placeholder="Enter Event Place" style={{ border: this.state.formStyle }} onChange={this.handleChangeEventPlace} />
             </label>
-            <input type="submit" />
+            <input type="submit" value="Submit" />
             <button className="cancel-btn" onClick={this.handleCancel}>Cancel</button>
           </form>
           <button className="display-event-form" onClick={this.handleDisplayForm}>Add event</button>

@@ -61,9 +61,9 @@ class Home extends Component {
             </div>
           </div>
           <div className="col-lg-6">
-                
+
             <Chart1 className="chart" />
-            
+
           </div>
           <div className="col-lg-6 chart1">
             <ChartLine />

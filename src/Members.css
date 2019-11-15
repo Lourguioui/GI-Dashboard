@@ -30,13 +30,14 @@
 .form{
   z-index : 3;
   background-color : #1e2340;
-  width : 100%;
   display : none;
   margin-top : 20px;
+  width : 400px;
+  margin-left : 6.5%;
 }
 .form label {
   margin-top : 30px;
-  margin-left : 25%;
+  margin-left : 13%;
   display : block;
 }
 .form label input {
@@ -50,7 +51,7 @@ form {
   padding-bottom: 30px;
 }
 .form input[type=submit] {
-  margin-left : 25%;
+  margin-left : 14.7%;
   width : 150px;
   height: 50px;
   background-color : rgb(28, 99, 180);

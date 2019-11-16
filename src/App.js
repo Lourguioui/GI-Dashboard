@@ -12,11 +12,26 @@ import Membres from "./Membres";
 import Events from "./Events";
 
 class App extends Component {
-  state = {};
+  state = {
+    sideBarStyle: '',
+    size : 'false'
+  };
   constructor() {
     super();
   }
+  componentDidMount() {
+    window.addEventListener(
+      "resize",
+      () => {
+        this.setState({
+          size: window.innerWidth =< 992
+        });
+      },
+      false
+    );
+  }
   render() {
+    const displayStyle = this.state.size ? 'block' : 'none';
     document.body.style =
       "background : rgb(23, 23, 43); padding-bottom : 100px; padding-top : 30px;";
     document.getElementsByTagName("META")[2].name = "viewport";
@@ -29,6 +44,7 @@ class App extends Component {
           <Router>
             <>
               <div className="side-bar">
+                
                 <SideBar />
               </div>
 

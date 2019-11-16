@@ -228,7 +228,7 @@ class Membres extends Component {
                             <input type="text" placeholder="Enter Last Name" style={{ border: this.state.formStyle }} onChange={this.handleChangeLastName} />
                         </label>
                         <label>
-                            <input type="text" placeholder="Enter Mail" style={{ border: this.state.formStyle }} onChange={this.handleChangeMail} />
+                            <input type="email" placeholder="Enter Mail" style={{ border: this.state.formStyle }} onChange={this.handleChangeMail} />
                         </label>
                         <label>
                             <input type="text" placeholder="Enter Section" onChange={this.handleChangeDepa} />

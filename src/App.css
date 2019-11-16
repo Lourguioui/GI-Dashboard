@@ -6,6 +6,13 @@
     transform: rotate(360deg);
   }
 }
+.displayed{
+  display : block;
+  z-index: 100;
+}
+.notdisplayed{
+  display : none;
+}
 
 @media only screen and (max-width: 992px) {
   .side-bar {

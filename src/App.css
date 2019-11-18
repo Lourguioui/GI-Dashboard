@@ -13,6 +13,17 @@
 .notdisplayed{
   display : none;
 }
+button{
+  background-color : rgba(255,255,255,0);
+  width : 100%;
+  border : none;
+  
+}
+button span{
+    size : 20px;
+    color : white;
+
+}
 
 @media only screen and (max-width: 992px) {
   .side-bar {

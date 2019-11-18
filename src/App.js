@@ -14,7 +14,7 @@ import Events from "./Events";
 class App extends Component {
   state = {
     sideBarStyle: '',
-    size : 'false'
+    size: 'false'
   };
   constructor() {
     super();
@@ -24,7 +24,7 @@ class App extends Component {
       "resize",
       () => {
         this.setState({
-          size: window.innerWidth =< 992
+          size: window.innerWidth < 993
         });
       },
       false
@@ -43,8 +43,8 @@ class App extends Component {
           <Header />
           <Router>
             <>
+              <button className={displayStyle}><span className="fa fa-arrow-right"></span></button>
               <div className="side-bar">
-                
                 <SideBar />
               </div>
 

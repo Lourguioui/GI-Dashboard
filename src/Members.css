@@ -87,8 +87,9 @@ form {
   outline:none;
 }
 .display-btn{
+  width : 18%;
   height : 50px;
-  margin-left : 43%;
+  margin-left : 40%;
   margin-top : 30px;
   background-color : #128fcd;
   border-radius : 6px;

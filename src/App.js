@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import logo from "./logo.svg";
 import "./App.css";
+import "font-awesome/css/font-awesome.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import SideBar from "./side-bar";
 import Header from "./Header";
@@ -13,8 +14,10 @@ import Events from "./Events";
 
 class App extends Component {
   state = {
-    sideBarStyle: '',
-    size: 'false'
+    size: '',
+    buttonDisplay: ''
+
+
   };
   constructor() {
     super();
@@ -31,6 +34,7 @@ class App extends Component {
     );
   }
   render() {
+    //const sideBar = this.state.size ? <SideBar /> : <div></div>;
     const displayStyle = this.state.size ? 'block' : 'none';
     document.body.style =
       "background : rgb(23, 23, 43); padding-bottom : 100px; padding-top : 30px;";
@@ -43,10 +47,15 @@ class App extends Component {
           <Header />
           <Router>
             <>
-              <button className={displayStyle}><span className="fa fa-arrow-right"></span></button>
-              <div className="side-bar">
-                <SideBar />
-              </div>
+              <button><span ><i className="fas fa-arrow-right" /></span></button>
+
+              {this.state.size ? (
+                <div></div>
+              )
+                : (
+                  <SideBar />
+                )
+              }
 
               <Route exact path="/" component={Home} />
               <Route path="/members" component={Membres} />

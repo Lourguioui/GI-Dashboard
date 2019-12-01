@@ -7,7 +7,7 @@ import "./tn1.jpg";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 import Home from "./Home";
-//import "font-awesome/css/font-awesome.min.css";
+import "font-awesome/css/font-awesome.min.css";
 import Header from "./Header";
 
 class SideBar extends Component {

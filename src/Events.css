@@ -1,5 +1,5 @@
 .Events {
-  margin-left: 25%;
+  margin-left: 23%;
   margin-top: 60px;
 }
 form{
@@ -59,7 +59,8 @@ form input[type=submit]:focus{
 }
 .display-event-form{
   height : 50px;
-  margin-left : 43%;
+  width : 18%;
+  margin-left : 40%;
   margin-top : 30px;
   background-color : #128fcd;
   border-radius : 6px;

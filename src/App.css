@@ -10,6 +10,18 @@
   display : block;
   z-index: 100;
 }
+.sidebar-btn {
+  margin-top : 30px;
+  height : 30px;
+  outline : none;
+  cursor : pointer;
+}
+.sidebar-btn span{
+  cursor : pointer;
+}
+.sidebar-btn button:focus{
+  outline : none;
+}
 .notdisplayed{
   display : none;
 }
@@ -26,8 +38,5 @@ button span{
 }
 
 @media only screen and (max-width: 992px) {
-  .side-bar {
-    display: none;
-    background-color: rgb(23, 23, 43);
-  }
+ 
 }

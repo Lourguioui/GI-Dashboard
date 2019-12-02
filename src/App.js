@@ -15,7 +15,7 @@ import Events from "./Events";
 class App extends Component {
   state = {
     size: '',
-    buttonDisplay: ''
+    clicked: false
 
 
   };
@@ -33,9 +33,14 @@ class App extends Component {
       false
     );
   }
+  handleClick = () => {
+    if (!this.state.clicked) {
+      this.setState({ clicked: true });
+    } else {
+      this.setState({ clicked: false });
+    }
+  }
   render() {
-    //const sideBar = this.state.size ? <SideBar /> : <div></div>;
-    const displayStyle = this.state.size ? 'block' : 'none';
     document.body.style =
       "background : rgb(23, 23, 43); padding-bottom : 100px; padding-top : 30px;";
     document.getElementsByTagName("META")[2].name = "viewport";
@@ -45,9 +50,11 @@ class App extends Component {
       <div className="container-fluid">
         <div className="row">
           <Header />
+          <div className="sidebar-btn">
+            <button onClick={this.handleClick}><span><i className="fa fa-arrow-right" /></span></button>
+          </div>
           <Router>
             <>
-              <button><span ><i className="fas fa-arrow-right" /></span></button>
 
               {this.state.size ? (
                 <div></div>
@@ -56,6 +63,14 @@ class App extends Component {
                   <SideBar />
                 )
               }
+              {this.state.clicked ? (
+                <SideBar />
+              )
+                : (
+                  <div></div>
+                )
+              }
+
 
               <Route exact path="/" component={Home} />
               <Route path="/members" component={Membres} />
